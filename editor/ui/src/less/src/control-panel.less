@@ -1,0 +1,195 @@
+#control-panel {
+    .default() {
+        width: 55px;
+        height: 100%;
+        background-color: @black400;
+        display: flex;
+
+        svg {
+            height: 25px;
+            width: 25px;
+            fill: lighten(@black200, 35%);
+
+            &:hover {
+                fill: @white000;
+            }
+        }
+
+        button {
+            outline-style: none;
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            border-style: solid;
+            border-width: 0px;
+        }
+
+        .screen-handler(
+            {
+                width: 100%;
+                height: 50px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: space-between
+            },
+            {
+                width: 100%;
+                height: 50px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: space-between
+            },
+            {
+                width: 55px;
+                height: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+            },
+            {
+                width: 55px;
+                height: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+            }
+        )
+    }
+
+    .top-control-panel() {
+        display: flex;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 100%;
+        height: 220px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+        .screen-handler(
+            {
+                width: 215px;
+                height: 100%;
+                padding-left: 8px;
+                padding-right: 8px;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: space-between;
+            },
+            {
+                padding-left: 8px;
+                padding-right: 8px;
+                width: 215PX;
+                height: 100%;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: space-between;
+            },
+            {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                width: 100%;
+                height: 220px;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: space-between;
+            },
+            {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                width: 100%;
+                height: 220px;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: space-between;
+            }
+        )
+    }
+
+    .bottom-control-panel() {
+        display: flex;
+        width: 100%;
+        height: 48px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+        .stop-game-btn {
+            display: none;
+            svg {
+                fill: rgb(240, 20, 0);
+                &:hover {
+                    fill: darken(rgb(240, 20, 0), 10%);
+                }
+            }
+        }
+
+        .play-game-btn {
+            display: block;
+            svg {
+                fill: #007fd4;
+                &:hover {
+                    fill: darken(#007fd4, 10%);
+                }
+            }
+        }
+        .screen-handler(
+            {
+                width: 53px;
+                height: 100%;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            },
+            {
+                width: 53px;
+                height: 100%;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            },
+            {
+                width: 100%;
+                height: 48px;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            },
+            {
+                width: 100%;
+                height: 48px;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+            }
+        )
+    }
+}

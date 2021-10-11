@@ -1,0 +1,35 @@
+{
+  "name": "karo-editor",
+  "version": "0.0.1",
+  "description": "the offical editor for ibgame karo engine",
+  "main": "index.js",
+  "scripts": {
+    "ts-watch": "cd ./editor && tsc --watch",
+    "wp-help": "webpack help",
+    "wp-watch": "cd ./engine && webpack watch",
+    "less-watch": "cd ./editor/ui/src && less-watch-compiler ./less ./css --main-file style.less"
+  },
+  "keywords": [
+    "ibgame",
+    "game engine"
+  ],
+  "author": "daniel_onyenwee",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/ejs": "^3.1.0",
+    "@types/node": "^16.9.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "bin": {
+    "karo-editor": "bin/cli.js"
+  },
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "ejs": "^3.1.6",
+    "open": "^8.2.1",
+    "wasm-imagemagick": "^1.2.8"
+  }
+}

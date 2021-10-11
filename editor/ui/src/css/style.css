@@ -1,0 +1,330 @@
+html,
+body {
+  margin: 0 0 0 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+body {
+  background-color: white;
+}
+div.window {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.window div.panel {
+  background-color: #252526;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.window div.panel div.control-panel {
+  width: 55px;
+  height: 100%;
+  background-color: #333333;
+  display: flex;
+}
+div.window div.panel div.control-panel svg {
+  height: 25px;
+  width: 25px;
+  fill: #7d7d80;
+}
+div.window div.panel div.control-panel svg:hover {
+  fill: white;
+}
+div.window div.panel div.control-panel button {
+  outline-style: none;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0px;
+}
+@media (max-width: 767px) {
+  div.window div.panel div.control-panel {
+    width: 100%;
+    height: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window div.panel div.control-panel {
+    width: 100%;
+    height: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window div.panel div.control-panel {
+    width: 55px;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  div.window div.panel div.control-panel {
+    width: 55px;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+div.window div.panel div.control-panel div.top-control-panel {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+  height: 220px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  div.window div.panel div.control-panel div.top-control-panel {
+    width: 215px;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window div.panel div.control-panel div.top-control-panel {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 215PX;
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window div.panel div.control-panel div.top-control-panel {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    height: 220px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  div.window div.panel div.control-panel div.top-control-panel {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    height: 220px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+div.window div.panel div.control-panel div.bottom-control-panel {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+div.window div.panel div.control-panel div.bottom-control-panel .stop-game-btn {
+  display: none;
+}
+div.window div.panel div.control-panel div.bottom-control-panel .stop-game-btn svg {
+  fill: #f01400;
+}
+div.window div.panel div.control-panel div.bottom-control-panel .stop-game-btn svg:hover {
+  fill: #bd1000;
+}
+div.window div.panel div.control-panel div.bottom-control-panel .play-game-btn {
+  display: block;
+}
+div.window div.panel div.control-panel div.bottom-control-panel .play-game-btn svg {
+  fill: #007fd4;
+}
+div.window div.panel div.control-panel div.bottom-control-panel .play-game-btn svg:hover {
+  fill: #0060a1;
+}
+@media (max-width: 767px) {
+  div.window div.panel div.control-panel div.bottom-control-panel {
+    width: 53px;
+    height: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window div.panel div.control-panel div.bottom-control-panel {
+    width: 53px;
+    height: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window div.panel div.control-panel div.bottom-control-panel {
+    width: 100%;
+    height: 48px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  div.window div.panel div.control-panel div.bottom-control-panel {
+    width: 100%;
+    height: 48px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+div.window div.panel div.body-panel {
+  width: calc(100% - 60px);
+  height: 100%;
+}
+@media (max-width: 767px) {
+  div.window div.panel div.body-panel {
+    width: 100%;
+    height: calc(100% - 50px);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window div.panel div.body-panel {
+    width: 100%;
+    height: calc(100% - 50px);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window div.panel div.body-panel {
+    width: calc(100% - 60px);
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  div.window div.panel div.body-panel {
+    width: calc(100% - 60px);
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  div.window div.panel {
+    height: 45%;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window div.panel {
+    height: 45%;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window div.panel {
+    height: 100%;
+    width: 30%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  div.window div.panel {
+    height: 100%;
+    width: 30%;
+    flex-direction: row;
+  }
+}
+div.window canvas.draw-board {
+  background-color: white;
+  height: 100%;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  div.window canvas.draw-board {
+    height: 55%;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window canvas.draw-board {
+    height: 55%;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window canvas.draw-board {
+    height: 100%;
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  div.window canvas.draw-board {
+    height: 100%;
+    width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  div.window {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.window {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.window {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  div.window {
+    flex-direction: row;
+  }
+}

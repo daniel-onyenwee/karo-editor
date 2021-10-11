@@ -1,0 +1,112 @@
+@import "./libs/utils.less";
+@import "./libs/constant.less";
+@import "./src/body-panel.less";
+@import "./src/control-panel.less";
+
+html, body {
+    margin: 0 0 0 0;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: @drawboardcolor;
+}
+
+div.window {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    div.panel {
+        background-color: @black200;
+        height: 100%;
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+
+        div.control-panel {
+            #control-panel.default();
+
+            div.top-control-panel {
+                #control-panel.top-control-panel();
+            }
+
+            div.bottom-control-panel {
+                #control-panel.bottom-control-panel()
+            }
+        }
+
+        div.body-panel {
+            #body-panel.default();
+        }
+
+        div.body-panel[id="assets-panel"] {
+            #body-panel.assets();
+        }
+
+        .screen-handler(
+            {
+                height: 45%;
+                width: 100%;
+                flex-direction: column-reverse;
+            },
+            {
+                height: 45%;
+                width: 100%;
+                flex-direction: column-reverse;
+            },
+            {
+                height: 100%;
+                width: 30%;
+                flex-direction: row;
+            },
+            {
+                height: 100%;
+                width: 30%;
+                flex-direction: row;
+            }
+        )
+    }
+    
+    canvas.draw-board {
+        background-color: @drawboardcolor;
+        height: 100%;
+        width: 60%;
+        .screen-handler(
+            {
+                height: 55%;
+                width: 100%;
+            },
+            {
+                height: 55%;
+                width: 100%;
+            },
+            {
+                height: 100%;
+                width: 70%;
+            },
+            {
+                height: 100%;
+                width: 70%;
+            }
+        )
+    }
+
+    .screen-handler(
+        {
+            flex-direction: column-reverse;
+        },
+        {
+            flex-direction: column-reverse;
+        },
+        {
+            flex-direction: row;
+        },
+        {
+            flex-direction: row;
+        }
+    )
+}
